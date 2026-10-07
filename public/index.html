@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Microgravity Fire Research · Orbital Mission Control (Node.js)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Dynamic Space Starfield Canvas -->
+  <canvas id="cosmic-canvas"></canvas>
+
+  <div id="app">
+    <aside id="side">
+      <div class="brand">
+        <div class="logo-orbit">NASA</div>
+        <div>
+          <b>ORBITAL LABS</b>
+          <span>COMBUSTION · ISS</span>
+        </div>
+      </div>
+      <nav id="nav"></nav>
+      <div class="status-box mono">
+        <div style="display:flex;align-items:center;margin-bottom:6px">
+          <span class="dot"></span>NODE.JS API ONLINE
+        </div>
+        <div id="orbit-alt" style="color:var(--tx);font-size:10px">ALTITUDE: 418.4 km</div>
+        <div id="orbit-inc" style="color:var(--mut);font-size:10px">INCLINATION: 51.6°</div>
+      </div>
+    </aside>
+
+    <div class="content-wrapper">
+      <div class="top">
+        <button onclick="document.getElementById('side').classList.toggle('open')" aria-label="Menu">☰</button>
+        <b style="letter-spacing:.14em;font-size:12px;color:var(--cyan)">MICROGRAVITY TELEMETRY (EXPRESS SERVER)</b>
+      </div>
+      <main id="view">
+        <div class="loading-state">
+          <div class="skel" style="height:32px;width:300px;margin-bottom:20px"></div>
+          <div class="skel" style="height:140px;width:100%;margin-bottom:20px"></div>
+          <div class="skel" style="height:260px;width:100%"></div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
